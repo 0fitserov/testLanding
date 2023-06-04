@@ -56,7 +56,7 @@ body {
 }
 
 .blocks {
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -216,4 +216,54 @@ body {
     align-self: flex-end;
     height: auto;
     background: linear-gradient(45deg, rgba(185, 38, 83, 0.9) 0%, rgba(185, 38, 83, 0.3) 100%);
+}
+
+/* Карточка услуги */
+
+.service-card {
+    position: relative;
+    display: flex;
+    border-color: white;
+}
+
+.service-card__img {
+    display: block;
+    width: 180px;
+    object-fit: cover;
+}
+
+.service-card__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px;
+    gap: 35px;
+}
+
+.service-card__desc {
+    margin-bottom: 0;
+}
+
+.service-card__link:before {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 100%;
+}
+
+.service-card__badge:after {
+    position: absolute;
+    display: block;
+    content: attr(data-badge);
+    color: white;
+    font-size: 12px;
+    left: 0;
+    bottom: 0;
+    max-width: 180px;
+    padding: 8px 14px;
+    background-color: rgba(0, 0, 0, 0.8);
+
 }
