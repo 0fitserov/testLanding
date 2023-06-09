@@ -314,7 +314,7 @@ body {
 /* карточка клиента */
 
 .client-card {
-   perspective: 500px; 
+    perspective: 500px;
 }
 
 .client-card__link {
@@ -332,12 +332,12 @@ body {
     transform: rotateY(-20deg);
 }
 
-.client-card:nth-child(2n) .client-card__link:hover{
+.client-card:nth-child(2n) .client-card__link:hover {
     transform: rotateY(20deg);
 
 }
 
-.client-card__link:before{
+.client-card__link:before {
     content: "";
     display: block;
     padding-top: 100%;
@@ -346,7 +346,7 @@ body {
 
 /* footer */
 
-.header{
+.header {
     background-color: white;
     position: absolute;
     left: 0;
@@ -385,8 +385,8 @@ body {
 }
 
 .header__menu {
-width: 100%;
-justify-content: space-between;
+    width: 100%;
+    justify-content: space-between;
 }
 
 /* hero */
@@ -396,9 +396,9 @@ justify-content: space-between;
 }
 
 .hero_info-list {
-display: grid;
-grid-template-columns: 1fr 1fr;
-height: calc(100vh - var(--header-height));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - var(--header-height));
 }
 
 .info-card:nth-child(3) {
@@ -407,14 +407,7 @@ height: calc(100vh - var(--header-height));
 }
 
 
-@media(max-width: 1000px) {
-    :root{
-        --header-height: 60px
-    }
-}
-
 /* services */
-
 .services {
     margin-bottom: 40px;
 }
@@ -423,4 +416,60 @@ height: calc(100vh - var(--header-height));
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+}
+
+/* steps */
+.steps {
+    margin-bottom: 40px;
+}
+.steps-black {
+    background-color: rgb(28, 28, 28);
+}
+
+.steps__list {
+    display: flex;
+    flex-direction: column;
+    counter-reset: section;
+}
+
+.steps__list-item {
+    width: 50%;
+}
+
+.steps__list-item:nth-child(2n) {
+    align-self: flex-end;
+}
+
+.steps__list-item:after {
+    counter-increment: section;
+    content: counter(section);
+}
+
+/* clients */
+.clients {
+    margin-bottom: 40px;
+}
+.clients__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+}
+
+/* footer */
+.footer {
+    background-color: rgb(28, 28, 28);
+}
+.container__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+@media(max-width: 1000px) {
+    :root {
+        --header-height: 60px
+    }
 }
