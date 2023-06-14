@@ -473,3 +473,42 @@ body {
         --header-height: 60px
     }
 }
+
+@media(max-width: 850px) {
+    
+    .hero_info-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: calc(100vh - var(--header-height));   
+    }
+
+    .services__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .steps__list {
+        gap: 10px 0;
+    }
+
+    .steps__list-item:nth-child(2n) {
+        align-self: center;
+    }
+
+    .steps__list-item {
+        width: 100%;
+    }
+
+    .step-card:after {
+        width: 30px;
+        height: 30px;
+        right: -15px;
+    }
+
+    .step-card:nth-child(2n):after {
+        left: -15px;
+    }
+    
+    
+}
